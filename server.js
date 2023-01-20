@@ -12,7 +12,11 @@ app.get('/index.html', async(req, res) => {
   res.render('pages/index.ejs');
 });
 
-
+app.get('/', async (req, res) => {
+console.log("in / index");
+});
+return;
+});
 
 // about page
 app.get('/about', function(req, res) {
