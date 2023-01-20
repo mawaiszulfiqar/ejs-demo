@@ -7,7 +7,7 @@ app.set('view engine', 'ejs');
 // use res.render to load up an ejs view file
 
 // index page
-app.get('/index.html', function(req, res) {
+app.get('/index.html', async(req, res) => {
   console.log("in home index");
   res.render('pages/index');
 });
