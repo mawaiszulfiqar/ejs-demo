@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-
+const router = express.Router()
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
@@ -12,19 +12,14 @@ app.get('/index.html', async(req, res) => {
   res.render('pages/index.ejs');
 });
 
-app.get('/', async (req, res) => {
-  console.log("in / index");
-    res.render('pages/index.ejs', {
-    theEnvironment: 'theenv',
-    });
-    return;
-});
-
 
 // about page
 app.get('/about', function(req, res) {
   res.render('pages/about.ejs');
-  
+
+router.get('/about', (req, res) => {
+  res.send('About birds')
+})
  
 app.listen(8080);
 console.log('Server is listening on port 8080');
