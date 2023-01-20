@@ -7,7 +7,7 @@ app.set('view engine', 'ejs');
 // use res.render to load up an ejs view file
 
 // index page
-app.get('/', function(req, res) {
+app.get('/index.html', function(req, res) {
   res.render('pages/index');
 });
 
