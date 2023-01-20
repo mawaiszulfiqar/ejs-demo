@@ -9,8 +9,10 @@ app.set('view engine', 'ejs');
 // index page
 app.get('/index.html', async(req, res) => {
   console.log("in home index");
-  res.render('pages/index');
+  res.render('pages/index.ejs');
 });
+
+
 
 // about page
 app.get('/about', function(req, res) {
