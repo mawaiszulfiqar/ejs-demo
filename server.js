@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-
+var router = express.Router();
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
