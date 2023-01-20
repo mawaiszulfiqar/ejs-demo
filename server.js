@@ -19,7 +19,7 @@ app.get('/about', function(req, res) {
 
 router.get('/*.html', (req, res) => {
   res.send('About birds')
-})
+});
  
 app.listen(8080);
 console.log('Server is listening on port 8080');
