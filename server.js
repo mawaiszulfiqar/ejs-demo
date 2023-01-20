@@ -14,14 +14,17 @@ app.get('/index.html', async(req, res) => {
 
 app.get('/', async (req, res) => {
   console.log("in / index");
-  res.render('pages/index.ejs');
+    res.render('pages/index.ejs', {
+    theEnvironment: 'theenv',
+    });
+    return;
 });
-return;
+
 
 // about page
 app.get('/about', function(req, res) {
-  res.render('pages/about');
-});
-
+  res.render('pages/about.ejs');
+  
+ 
 app.listen(8080);
 console.log('Server is listening on port 8080');
