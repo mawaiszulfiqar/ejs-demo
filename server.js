@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-const router = express.Router()
+var router = express.Router();
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
@@ -17,7 +17,7 @@ app.get('/index.html', async(req, res) => {
 app.get('/about', function(req, res) {
   res.render('pages/about.ejs');
 
-router.get('/about', (req, res) => {
+router.get('/*.html', (req, res) => {
   res.send('About birds')
 })
  
