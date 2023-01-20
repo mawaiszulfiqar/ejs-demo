@@ -13,10 +13,10 @@ app.get('/index.html', async(req, res) => {
 });
 
 app.get('/', async (req, res) => {
-console.log("in / index");
+  console.log("in / index");
+  res.render('pages/index.ejs');
 });
-return;
-});
+
 
 // about page
 app.get('/about', function(req, res) {
